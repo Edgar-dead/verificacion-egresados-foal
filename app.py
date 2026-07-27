@@ -11,6 +11,10 @@ st.set_page_config(
 
 # --- ESTILOS VISUALES PARA LA INTERFAZ ---
 st.markdown("""
+    <html lang="es" class="notranslate" translate="no">
+    <head>
+        <meta name="google" content="notranslate" />
+    </head>
     <style>
     .main-title {
         color: #0F172A;
@@ -174,7 +178,9 @@ if boton_consultar or st.session_state.get('verificado', False):
         else:
             st.session_state['verificado'] = False
             st.error("❌ El número de cédula ingresado NO se encuentra en la nómina oficial de egresados.")
-            st.info("ℹ️ Si completó sus estudios y no aparece en el sistema, por favor contacte al Departamento de Registro Académico para verificar su expediente.")
+            
+            # INSTRUCCIÓN ACTUALIZADA
+            st.info("ℹ️ Si completó sus estudios y no aparece en el sistema, por favor contacte con el equipo de soporte de M360° para verificar su expediente. Si ha concluido entre la segunda quincena de junio y setiembre, se informa que el siguiente reporte se realizará una vez concluido el curso, a inicios del mes de octubre, 2026.")
 
 # Pie de página institucional
 st.markdown("---")
