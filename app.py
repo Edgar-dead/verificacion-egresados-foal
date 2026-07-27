@@ -163,7 +163,7 @@ if boton_consultar or st.session_state.get('verificado', False):
             confirmado = st.checkbox("👉 CONFIRMO QUE MIS DATOS (NOMBRES, APELLIDOS Y CÉDULA) ESTÁN CORRECTOS Y SOLICITO MI CERTIFICADO.")
             
             # ENLACE A LA COMUNIDAD DE WHATSAPP
-            ENLACE_GRUPO_WHATSAPP = "https://chat.whatsapp.com/TuCodigoDeGrupoAqui"
+            ENLACE_GRUPO_WHATSAPP = "https://chat.whatsapp.com/LguFT9oElAHAv6wrSsTD4P"
 
             if confirmado:
                 st.success("🎉 Datos confirmados con éxito. Puede unirse a la Comunidad de Aprendizaje.")
