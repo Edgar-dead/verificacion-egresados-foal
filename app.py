@@ -4,7 +4,7 @@ import os
 
 # Configuración de la pestaña del navegador
 st.set_page_config(
-    page_title="Verificación y Certificación de Egresados",
+    page_title="Verificación y Certificación de Egresados - FOAL-MEC-2026",
     page_icon="🎓",
     layout="centered"
 )
@@ -73,8 +73,8 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# Encabezado visual
-st.markdown('<div class="main-title">🎓 Consulta de Nómina y Solicitud de Certificado</div>', unsafe_allow_html=True)
+# Encabezado visual actualizado para el curso FOAL-MEC-2026
+st.markdown('<div class="main-title">🎓 Curso FOAL-MEC-2026: Consulta de Nómina y Solicitud de Certificado</div>', unsafe_allow_html=True)
 st.markdown('<div class="subtitle">Ingrese su número de cédula para verificar su condición de egreso y gestionar su certificado</div>', unsafe_allow_html=True)
 
 # --- CONFIGURACIÓN DEL ARCHIVO EXCEL ---
@@ -102,7 +102,7 @@ if error_carga:
     st.error(f"❌ Error al abrir el archivo de datos: {error_carga}")
     st.stop()
 
-# Validación de las nuevas columnas requeridas
+# Validación de las columnas requeridas
 columnas_requeridas = ['Nombres', 'Apellidos', 'Cédula de identidad', 'Fecha de culminación']
 columnas_faltantes = [col for col in columnas_requeridas if col not in df_egresados.columns]
 
@@ -174,6 +174,7 @@ if boton_consultar or st.session_state.get('verificado', False):
             # Bloque de texto listo para copiar
             texto_copiar = (
                 f"SOLICITUD DE CERTIFICADO DE EGRESO:\n"
+                f"• Curso: FOAL-MEC-2026\n"
                 f"• Nombres: {nombres_alumno}\n"
                 f"• Apellidos: {apellidos_alumno}\n"
                 f"• Cédula: {cedula_alumno}\n"
